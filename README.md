@@ -3,8 +3,8 @@ A game similar to Banished, but with better NPC AI mechanics and progression.
 
 # Roadmap
 ## The absolute basics
-- [ ] Set up OpenGL for drawing.
-- [ ] CMakeLists.
+- [X] Set up OpenGL for drawing.
+- [X] CMakeLists.
 
 - [ ] Tiling
     - [ ] Some kind of entity/class for handling basic terrain

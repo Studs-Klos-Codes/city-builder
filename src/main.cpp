@@ -1,4 +1,6 @@
+#include "tile.hpp"
 #include <GL/freeglut.h>
+#include <iostream>
 
 //Program to create an empty Widdow
 void init(){
@@ -22,6 +24,5 @@ int main(int argc,char **argv)
 	init();					//Line B
 	glutDisplayFunc(display);
 	glutMainLoop();
-
 	return 0;
 }

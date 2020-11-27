@@ -65,3 +65,10 @@ tags
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,vim,vscode
+#
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+citybuilder

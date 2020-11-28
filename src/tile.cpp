@@ -1,9 +1,9 @@
 #include "tile.hpp"
+#include <GLFW/glfw3.h>
 
 namespace citybuilder
 {
-    Tile::Tile(unsigned int x, unsigned int y, unsigned int width, unsigned height)
-        :x(x), y(x), width(width), height(height) {}
+    Tile::Tile(unsigned int x, unsigned int y) :x(x), y(x) {}
 
     unsigned int Tile::getX()
     {
@@ -15,13 +15,13 @@ namespace citybuilder
         return y;
     }
 
-    unsigned int Tile::getHeight()
+    void Tile::draw(float x, float y, float width, float height)
     {
-        return height;
-    }
-
-    unsigned int Tile::getWidth()
-    {
-        return width;
+        glBegin(GL_QUADS);
+            glVertex3f(x, y, 0.0);
+            glVertex3f(x + width, y, 0.0);
+            glVertex3f(x + width, y + height, 0.0);
+            glVertex3f(x, y + height, 0.0);
+        glEnd();
     }
 }

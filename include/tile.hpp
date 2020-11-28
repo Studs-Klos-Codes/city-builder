@@ -14,18 +14,15 @@ namespace  citybuilder
              *
              * @param x Integer, the x position of the tile.
              * @param y Integer, the y position of the tile.
-             * @param width Integer, the width, in pixels, of the tile.
-             *              Defaults to 64.
-             * @param height Integer, the height, in pixels, of the tile.
-             *               Defaults to 64.
-            */
-            Tile (unsigned int, unsigned int, unsigned int = 64, unsigned int = 64);
+             */
+            Tile (unsigned int, unsigned int);
             unsigned int getX();
             unsigned int getY();
-            unsigned int getWidth();
-            unsigned int getHeight();
+            /**
+             * Draws the Tile as a rectangle in the current window.
+             */
+            void draw(float, float, float, float);
         private:
-            unsigned int width, height;
             unsigned int x, y;
     };
 

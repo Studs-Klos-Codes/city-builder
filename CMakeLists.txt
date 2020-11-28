@@ -21,12 +21,15 @@ add_executable(${PROJECT_NAME}
   ${HEADER}
 )
 
-find_package(OpenGL REQUIRED COMPONENTS OpenGL)
-find_package(GLUT REQUIRED)
 
-add_dependencies(${PROJECT_NAME} OpenGL::OpenGL)
-include_directories(${GLUT_INCLUDE_DIRS})
-target_link_libraries(${PROJECT_NAME} OpenGL::OpenGL ${GLUT_LIBRARY})
+find_package(glfw3 3.3 REQUIRED)
+target_link_libraries(${PROJECT_NAME} glfw)
+
+find_package(GLEW REQUIRED)
+target_link_libraries(${PROJECT_NAME} GLEW)
+
+find_package(OpenGL REQUIRED COMPONENTS OpenGL)
+target_link_libraries(${PROJECT_NAME} OpenGL::OpenGL)
 
 
 source_group("Header include" FILES ${HEADER})
